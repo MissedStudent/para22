@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.para22.HelloApplication">
+   <children>
+      <TabPane prefHeight="800.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Добавить событие">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="771.0" prefWidth="1200.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="event_event_name" promptText="Название события" />
+                              <ComboBox fx:id="event_member_fullname" prefWidth="150.0" promptText="Участник" />
+                              <ComboBox fx:id="event_sponsor_name" prefWidth="150.0" promptText="Спонсор" />
+                              <Button fx:id="event_add" mnemonicParsing="false" onAction="#adding_event" text="Добавить" />
+                              <Button fx:id="proverka" mnemonicParsing="false" onAction="#proveriaem" text="Инициализация" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Добавить место">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0">
+                     <children>
+                        <VBox prefHeight="771.0" prefWidth="1200.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="location_location_name" promptText="Название локации" />
+                              <ComboBox fx:id="location_event_name" prefWidth="150.0" promptText="Событие" />
+                              <Button fx:id="location_add" mnemonicParsing="false" onAction="#adding_location" text="Добавить" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Добавить участников">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0">
+                     <children>
+                        <VBox prefHeight="771.0" prefWidth="1200.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="member_member_surname" promptText="Фамилия участника" />
+                              <TextField fx:id="member_member_name" promptText="Имя участника" />
+                              <TextField fx:id="member_member_lastname" promptText="Отчество участника" />
+                              <Button fx:id="member_add" mnemonicParsing="false" onAction="#adding_member" text="Добавить" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Добавить спонсоров">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0">
+                     <children>
+                        <VBox prefHeight="771.0" prefWidth="1200.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="sponsor_sponsor_name" promptText="Наименование спонсора" />
+                              <TextField fx:id="sponsor_how_much" promptText="На сколько проспонсировали" />
+                              <Button fx:id="sponsor_add" mnemonicParsing="false" onAction="#adding_sponsor" text="Добавить" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Добавить билеты">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0">
+                     <children>
+                        <VBox prefHeight="771.0" prefWidth="1200.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="ticket_ticket_owner" promptText="Чей билет" />
+                              <ComboBox fx:id="ticket_event_name" prefWidth="150.0" promptText="Событие" />
+                              <Button fx:id="ticket_add" mnemonicParsing="false" onAction="#adding_ticket" text="Добавить" />
+                           </children></VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
